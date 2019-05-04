@@ -6,7 +6,7 @@
 	<Authors>Wesley Baartman</Authors>
     <PackageProjectUrl>https://github.com/CptWesley/Nhahaha</PackageProjectUrl>
     <RepositoryUrl>https://github.com/CptWesley/Nhahaha</RepositoryUrl>
-    <PackageLicenseUrl>https://github.com/CptWesley/Nhahaha/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Description>Localized laughter in .NET</Description>
     <PackageTags>nhahaha laughter laughing localization</PackageTags>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
