@@ -1,12 +1,12 @@
 ﻿namespace Nhahaha
 {
     /// <summary>
-    /// Thai laughter producing engine.
+    /// Japanese laughter producing engine.
     /// </summary>
-    public class ThaiLaughter : Laughter
+    public class JapaneseLaughter : Laughter
     {
         /// <inheritdoc/>
         public override string LaughOnce()
-            => "5";
+            => "w";
     }
 }

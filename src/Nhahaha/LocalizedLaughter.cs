@@ -20,6 +20,8 @@ namespace Nhahaha
                     return new SpanishLaughter();
                 case "th":
                     return new ThaiLaughter();
+                case "jp":
+                    return new JapaneseLaughter();
                 default:
                     return new InternationalLaughter();
             }
