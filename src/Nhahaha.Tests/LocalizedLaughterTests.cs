@@ -25,6 +25,13 @@ namespace Nhahaha.Tests
             => AssertThat(LocalizedLaughter.Create(new CultureInfo("en"))).IsExactlyInstanceOf<InternationalLaughter>();
 
         /// <summary>
+        /// Checks that we can create the thai culture laughter correctly.
+        /// </summary>
+        [Fact]
+        public static void ThaiTest()
+            => AssertThat(LocalizedLaughter.Create(new CultureInfo("th"))).IsExactlyInstanceOf<ThaiLaughter>();
+
+        /// <summary>
         /// Checks that we can create the correct laughter from the current thread culture.
         /// </summary>
         [Fact]

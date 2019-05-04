@@ -42,8 +42,8 @@ namespace Nhahaha.Tests
         public void OnceCapitalizedTrueTest()
         {
             string once = laughter.LaughOnce(true);
-            AssertThat(char.IsUpper(once[0])).IsTrue();
-            AssertThat(once.Substring(1).ToCharArray()).AllSatisfy(c => char.IsLower(c));
+            AssertThat(char.IsUpper(once[0]) || char.IsNumber(once[0])).IsTrue();
+            AssertThat(once.Substring(1).ToCharArray()).AllSatisfy(c => char.IsLower(c) || char.IsNumber(c));
         }
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace Nhahaha.Tests
         public void OnceCapitalizeFalseTest()
         {
             string once = laughter.LaughOnce(false);
-            AssertThat(once.ToCharArray()).AllSatisfy(c => char.IsLower(c));
+            AssertThat(once.ToCharArray()).AllSatisfy(c => char.IsLower(c) || char.IsNumber(c));
         }
 
         /// <summary>
@@ -63,7 +63,7 @@ namespace Nhahaha.Tests
         public void OnlyLowerCaseTest()
         {
             string once = laughter.LaughOnce();
-            AssertThat(once.ToCharArray()).AllSatisfy(c => char.IsLower(c));
+            AssertThat(once.ToCharArray()).AllSatisfy(c => char.IsLower(c) || char.IsNumber(c));
         }
 
         /// <summary>
@@ -86,8 +86,8 @@ namespace Nhahaha.Tests
             string once = laughter.LaughOnce();
             string actual = laughter.Laugh(4, true);
             AssertThat(actual.ToLowerInvariant()).IsEqualTo($"{once}{once}{once}{once}");
-            AssertThat(char.IsUpper(actual[0])).IsTrue();
-            AssertThat(actual.Substring(1).ToCharArray()).AllSatisfy(c => char.IsLower(c));
+            AssertThat(char.IsUpper(actual[0]) || char.IsNumber(actual[0])).IsTrue();
+            AssertThat(actual.Substring(1).ToCharArray()).AllSatisfy(c => char.IsLower(c) || char.IsNumber(c));
         }
 
         /// <summary>
@@ -99,7 +99,7 @@ namespace Nhahaha.Tests
             string once = laughter.LaughOnce();
             string actual = laughter.Laugh(5, false);
             AssertThat(actual.ToLowerInvariant()).IsEqualTo($"{once}{once}{once}{once}{once}");
-            AssertThat(actual.ToCharArray()).AllSatisfy(c => char.IsLower(c));
+            AssertThat(actual.ToCharArray()).AllSatisfy(c => char.IsLower(c) || char.IsNumber(c));
         }
 
         /// <summary>
@@ -121,8 +121,8 @@ namespace Nhahaha.Tests
             string once = laughter.LaughOnce();
             string actual = laughter.Laugh(true);
             AssertThat(actual.ToLowerInvariant()).IsEqualTo($"{once}{once}{once}");
-            AssertThat(char.IsUpper(actual[0])).IsTrue();
-            AssertThat(actual.Substring(1).ToCharArray()).AllSatisfy(c => char.IsLower(c));
+            AssertThat(char.IsUpper(actual[0]) || char.IsNumber(actual[0])).IsTrue();
+            AssertThat(actual.Substring(1).ToCharArray()).AllSatisfy(c => char.IsLower(c) || char.IsNumber(c));
         }
 
         /// <summary>
@@ -134,7 +134,7 @@ namespace Nhahaha.Tests
             string once = laughter.LaughOnce();
             string actual = laughter.Laugh(false);
             AssertThat(actual.ToLowerInvariant()).IsEqualTo($"{once}{once}{once}");
-            AssertThat(actual.ToCharArray()).AllSatisfy(c => char.IsLower(c));
+            AssertThat(actual.ToCharArray()).AllSatisfy(c => char.IsLower(c) || char.IsNumber(c));
         }
     }
 }
