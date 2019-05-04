@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using System.Threading;
 using Xunit;
 using static AssertNet.Xunit.Assertions;
 
@@ -22,5 +23,15 @@ namespace Nhahaha.Tests
         [Fact]
         public static void InternationalTest()
             => AssertThat(LocalizedLaughter.Create(new CultureInfo("en"))).IsExactlyInstanceOf<InternationalLaughter>();
+
+        /// <summary>
+        /// Checks that we can create the correct laughter from the current thread culture.
+        /// </summary>
+        [Fact]
+        public static void CurrentCultureTest()
+        {
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("es");
+            AssertThat(LocalizedLaughter.Create()).IsExactlyInstanceOf<SpanishLaughter>();
+        }
     }
 }
