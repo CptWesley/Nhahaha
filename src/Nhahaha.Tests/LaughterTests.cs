@@ -1,5 +1,4 @@
-﻿using System.Text;
-using Xunit;
+﻿using Xunit;
 using static AssertNet.Xunit.Assertions;
 
 namespace Nhahaha.Tests
