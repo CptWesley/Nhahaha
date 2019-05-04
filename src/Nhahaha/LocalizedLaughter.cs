@@ -22,6 +22,16 @@ namespace Nhahaha
                     return new ThaiLaughter();
                 case "jp":
                     return new JapaneseLaughter();
+                case "ru":
+                    return new RussianLaughter();
+                case "ko":
+                    return new KoreanLaughter();
+                case "pt":
+                    return new PortugeseLaughter();
+                case "el":
+                    return new GreekLaughter();
+                case "da":
+                    return new DanishLaughter();
                 default:
                     return new InternationalLaughter();
             }

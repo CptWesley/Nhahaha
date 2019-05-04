@@ -39,6 +39,41 @@ namespace Nhahaha.Tests
             => AssertThat(LocalizedLaughter.Create(new CultureInfo("jp"))).IsExactlyInstanceOf<JapaneseLaughter>();
 
         /// <summary>
+        /// Checks that we can create the Russian culture laughter correctly.
+        /// </summary>
+        [Fact]
+        public static void RussianTest()
+            => AssertThat(LocalizedLaughter.Create(new CultureInfo("ru"))).IsExactlyInstanceOf<RussianLaughter>();
+
+        /// <summary>
+        /// Checks that we can create the Korean culture laughter correctly.
+        /// </summary>
+        [Fact]
+        public static void KoreanTest()
+            => AssertThat(LocalizedLaughter.Create(new CultureInfo("ko"))).IsExactlyInstanceOf<KoreanLaughter>();
+
+        /// <summary>
+        /// Checks that we can create the Portugese culture laughter correctly.
+        /// </summary>
+        [Fact]
+        public static void PortugeseTest()
+            => AssertThat(LocalizedLaughter.Create(new CultureInfo("pt"))).IsExactlyInstanceOf<PortugeseLaughter>();
+
+        /// <summary>
+        /// Checks that we can create the Greek culture laughter correctly.
+        /// </summary>
+        [Fact]
+        public static void GreekTest()
+            => AssertThat(LocalizedLaughter.Create(new CultureInfo("el"))).IsExactlyInstanceOf<GreekLaughter>();
+
+        /// <summary>
+        /// Checks that we can create the Danish culture laughter correctly.
+        /// </summary>
+        [Fact]
+        public static void DanishTest()
+            => AssertThat(LocalizedLaughter.Create(new CultureInfo("da"))).IsExactlyInstanceOf<DanishLaughter>();
+
+        /// <summary>
         /// Checks that we can create the correct laughter from the current thread culture.
         /// </summary>
         [Fact]
